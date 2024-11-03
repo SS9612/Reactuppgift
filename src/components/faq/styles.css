@@ -1,0 +1,117 @@
+#FAQ-Desktop {
+    display: block;
+    background: #F3F6FF;
+  }
+  
+  #FAQ-Desktop .container-desktop {
+    max-width: 1296px;
+    margin: 0 auto;
+    padding: 112px 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .FAQleft-desktop .titleTXTFAQ-desktop {
+    margin-top: -2rem;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 0.5rem;
+  }
+  
+  .FAQleft-desktop .subtitleTXTFAQ-desktop {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+  
+  .FAQiconboxes-container-desktop {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .FAQiconboxblue-desktop, .FAQiconboxgreen-desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem;
+    width: 196px;
+    height: 166px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    text-align: left;
+  }
+  
+  .FAQiconboxblue-desktop i, .FAQiconboxgreen-desktop img {
+    font-size: 28px;
+    margin-bottom: 1rem;
+  }
+  
+  .FAQiconboxblue-desktop p, .FAQiconboxgreen-desktop p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+  }
+  
+  .FAQiconboxblue-desktop a, .FAQiconboxgreen-desktop a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .FAQiconboxblue-desktop a {
+    color: blue;
+  }
+  
+  .FAQiconboxgreen-desktop a {
+    color: #22C55E;
+  }
+  
+  .Accordion-Desktop {
+    flex: 1;
+    max-width: 746px;
+    margin-left: 1rem;
+  }
+  
+  .Accordion-Desktop .AccordionItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    height: 68px;
+  }
+  
+  .Accordion-Desktop .AccordionItem p {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .Accordion-Desktop .AccordionItem button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+  }
+  
+  .Accordion-Desktop .open-panel-body {
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    line-height: 160%;
+    padding: 1rem 0;
+    color: #565973;
+    border-radius: 8px;
+    text-align: left;
+  }
+  

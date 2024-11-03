@@ -1,0 +1,99 @@
+#subscribe-section {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+#subscribe-section .subscribe-container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "headline" 
+      "content";
+    background-color: #F3F6FF;
+    border-radius: 16px;
+    padding: 2rem;
+    align-items: center;
+    max-width: 1296px;
+    margin: 0 auto;
+}
+
+@media (min-width: 1400px) {
+    #subscribe-section .subscribe-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "headline content";
+        padding: 2rem 5rem;
+    }
+}
+
+.subscribe-headline {
+    grid-area: headline;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.subscribe-headline img {
+    width: 78px;
+    height: 78px;
+}
+
+.subscribe-headline p {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #131022;
+}
+
+.subscribe-content {
+    grid-area: content;
+    display: flex;
+    align-items: center;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 0 1rem;
+    max-width: 500px;
+    height: 52px;
+    gap: 1rem; /* Adjust gap for proper spacing */
+}
+
+.subscribe-txt-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.subscribe-txt-icon i {
+    color: #B4B7C9;
+    font-size: 1.2rem;
+}
+
+.subscribe-txt-icon p {
+    font-size: 16px;
+    color: #B4B7C9;
+    margin: 0;
+    white-space: nowrap; /* Keep text in one line */
+}
+
+.subscribe-button {
+    display: flex;
+    align-items: center;
+}
+
+#subscribe-section .subscribe-button a {
+    background-color: #4F46E5;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+#subscribe-section .subscribe-button a:hover {
+    background-color: #3730A3;
+}

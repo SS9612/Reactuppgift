@@ -1,0 +1,62 @@
+#sliders {
+    background-color: #f3f6ff;
+    padding: 4rem 0;
+    padding-left: 312px;
+    padding-right: 312px;
+  }
+  
+  #sliders .container {
+    max-width: 1296px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .sliders-header {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  
+  .sliders-title {
+    font-size: 40px;
+    font-weight: 800;
+    color: #131022;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .sliders-desktop-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .Desktopimagessliders {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 100px;
+  }
+  
+  .Desktop-bottomtext {
+    text-align: center;
+    margin-top: 2rem;
+    width: 60%;
+  }
+  
+  .Desktop-bottom-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: #131022;
+    margin-bottom: 1.5rem;
+  }
+  
+  .Desktop-bottom-subtitle {
+    font-size: 16px;
+    color: #131022;
+  }
+  

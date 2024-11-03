@@ -1,0 +1,30 @@
+#logos {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    padding-left: 312px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        max-width: 1296px;
+        width: 100%;
+    }
+
+    .logo-box {
+        border: 1px solid #E2E5F1;
+        border-radius: 8px;
+        height: 100px;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        background-color: #fff;
+    }
+
+        @media (min-width: 1400px) {
+            display: flex;
+        }
+    }
