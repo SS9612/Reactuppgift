@@ -1,20 +1,20 @@
 import React from 'react';
-import Navbar from '../components/Header';
 import Hero from '../components/Hero';
 import Logos from '../components/Logos';
 import AppFeatures from '../components/AppFeatures';
 import Sliders from '../components/Sliders';
 import Upperfeatures from '../components/Upperfeatures';
 import Bottomfeatures from '../components/Bottomfeatures';
-import Testimonials from '../components/Testimonials';
-import FAQ from '../components/FAQ';
-import Subscribe from '../components/Subscribe';
-import Footer from '../components/Footer';
+import Testimonials from '../components/testimonals';
+import FAQ from '../components/faq';
+import Subscribe from '../components/subscribe';
+import Header from '../components/header';
+import Footer from '../components/footer';
 
-const Home = () => {
+function Home() {
   return (
     <>
-      <Navbar />
+    <Header />
       <Hero />
       <Logos />
       <AppFeatures />
@@ -23,10 +23,10 @@ const Home = () => {
       <Bottomfeatures />
       <Testimonials />
       <FAQ />
-      <Subscribe/>
-      <Footer/>
+      <Subscribe />
+      <Footer />
     </>
   );
-};
+}
 
 export default Home;

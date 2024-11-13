@@ -1,10 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './styles.css';
 import ChevronDown from '../../assets/chevron-down.svg';
 import ChevronUp from '../../assets/chevron-up.svg';
 import GreenCommentsIcon from '../../assets/Greencommentsicon.svg';
+import { fetchFAQ } from '../../services/apiService';
 
 const FAQ = () => {
+  const [faqs, setFaqs] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [openIndex, setOpenIndex] = useState(null);
+
+  useEffect(() => {
+    fetchFAQ()
+      .then(data => {
+        setFaqs(data);
+        setLoading(false);
+      })
+      .catch(error => {
+        setError(error);
+        setLoading(false);
+      });
+  }, []);
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  if (loading) return <p>Loading FAQs...</p>;
+  if (error) return <p>Error loading FAQs: {error.message}</p>;
+
   return (
     <section id="FAQ-Desktop">
       <div className="container-desktop">
@@ -40,52 +65,27 @@ const FAQ = () => {
         </div>
 
         <div className="Accordion-Desktop">
-          <div className="AccordionItem">
-            <p>Is any of my personal information stored in the App?</p>
-            <button className="Desktopchevron-down">
-              <img src={ChevronDown} alt="Chevron-down" />
-            </button>
-          </div>
-
-          <div className="AccordionItem">
-            <p>What formats can I download my transaction history in?</p>
-            <button className="Desktopchevron-down">
-              <img src={ChevronDown} alt="Chevron-down" />
-            </button>
-          </div>
-
-          <div className="AccordionItem open">
-            <div className="open-panel-header">
-              <p>Can I schedule future transfers?</p>
-              <button className="Desktopchevron-up">
-                <img src={ChevronUp} alt="Chevron-up" />
-              </button>
+          {faqs.map((faq, index) => (
+            <div
+              key={faq.id}
+              className={`AccordionItem ${openIndex === index ? 'open' : ''}`}
+            >
+              <div className="AccordionItemHeader" onClick={() => toggleFAQ(index)}>
+                <p>{faq.title}</p>
+                <button className="AccordionToggle">
+                  <img
+                    src={openIndex === index ? ChevronUp : ChevronDown}
+                    alt="Chevron"
+                  />
+                </button>
+              </div>
+              {openIndex === index && (
+                <div className="open-panel-body">
+                  <p>{faq.content}</p>
+                </div>
+              )}
             </div>
-            <div className="open-panel-body">
-              <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
-            </div>
-          </div>
-
-          <div className="AccordionItem">
-            <p>When can I use Banking App services?</p>
-            <button className="Desktopchevron-down">
-              <img src={ChevronDown} alt="Chevron-down" />
-            </button>
-          </div>
-
-          <div className="AccordionItem">
-            <p>Can I create my own password that is easy for me to remember?</p>
-            <button className="Desktopchevron-down">
-              <img src={ChevronDown} alt="Chevron-down" />
-            </button>
-          </div>
-
-          <div className="AccordionItem">
-            <p>What happens if I forget or lose my password?</p>
-            <button className="Desktopchevron-down">
-              <img src={ChevronDown} alt="Chevron-down" />
-            </button>
-          </div>
+          ))}
         </div>
       </div>
     </section>

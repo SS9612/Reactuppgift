@@ -1,0 +1,90 @@
+.consultation-form {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 5rem;
+  border-radius: 16px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05), 0px 8px 24px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  height: 650px;
+  margin: 0 auto;
+}
+
+.consultation-form h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0B0F19;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.consultation-form form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.consultation-form label {
+  font-size: 16px;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.consultation-form input {
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #0B0F19;
+  background-color: #f9fafb;
+  transition: border-color 0.3s ease;
+}
+
+.specialist-input {
+  position: relative;
+  padding-right: 2.5rem;
+  background-image: url('/src/assets/chevron.svg');
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 24px 24px;
+}
+
+
+.consultation-form input:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+.consultation-form input:last-of-type {
+  margin-bottom: 100px;
+}
+
+.consultation-form input:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+.consultation-form button {
+  width: 492px;
+  height: 52px; 
+  background-color: #6366f1;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 8px 18px -8px rgba(99, 102, 241, 0.9);
+  align-self: center;
+}
+
+.consultation-form button:hover {
+  background-color: #4f46e5;
+}
+
+.consultation-form input::placeholder {
+  color: #9ca3af;
+}
