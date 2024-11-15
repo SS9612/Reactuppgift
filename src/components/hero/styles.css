@@ -1,16 +1,16 @@
 #hero {
     background: linear-gradient(0deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%);
-    padding: 3rem 1rem; /* Add padding at the top and bottom */
+    padding: 3rem 1rem;
     overflow: hidden;
     display: flex;
-    justify-content: center; /* Center the container */
+    justify-content: center;
   }
   
   .container {
-    max-width: 1296px; /* Set max width */
+    max-width: 1296px;
     width: 100%;
-    padding-left: 1rem; /* Left padding for smaller screens */
-    padding-right: 1rem; /* Right padding for smaller screens */
+    padding-left: 1rem;
+    padding-right: 1rem;
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr;
